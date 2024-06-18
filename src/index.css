@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+IS&display=swap');
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gameStartContainer{
+  position: relative;
+  margin: 8rem;
+  font-family: "Kanit", sans-serif;
+  font-weight: bold;
+}
+
+
+.questionIconGreen,.questionIconRed{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  position: fixed;
+  left: 20rem;
+  right: 80rem;
+  gap: 20rem;
+  color: rgba(10, 136, 10, 0.705);
+  font-size: 5rem;
+  transform: skewX(8deg)
+}
+.questionIconGreen {
+  animation: greenBig 5s infinite alternate; 
+}
+
+@keyframes greenBig {
+  0% {
+    font-size: 5rem; 
+  }
+  50% {
+    font-size: 6rem; 
+  }
+  100%{
+    font-size: 4rem;
+  }
+}
+
+.questionIconRed,.questionIconLast{
+  grid-template-columns: repeat(2,1fr);
+  top: 12rem;
+  left: 35rem;
+  color: rgba(202, 13, 13, 0.699);
+  gap: 8rem;
+  font-size: 2rem;
+  animation: redBig 5s infinite alternate-reverse; 
+}
+
+
+@keyframes redBig {
+  0% {
+    font-size: 2rem; 
+  }
+  50%{
+    font-size: 3rem;
+  }
+  100%{
+    font-size: 1rem;
+  }
+}
+
+.questionIconRed2,.questionIconGreen2, .questionIconLast{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-content: space-between;
+  position: fixed;
+  top: 16rem;
+  left: 15rem;
+  right: -30rem;
+  color: rgba(202, 13, 13, 0.699);
+  font-size: 6rem;
+  transform: skewX(8deg)
+}
+
+.questionIconRed2, .questionIconGreen2{
+  animation: redBig2 5s infinite alternate-reverse; 
+}
+
+
+@keyframes redBig2 {
+  0% {
+    font-size: 6rem; 
+  }
+  50%{
+    font-size: 7rem;
+  }
+  100%{
+    font-size: 5rem;
+  }
+}
+
+.questionIconGreen2{
+  top: 30rem;
+  left: 8rem;
+  color: rgba(10, 136, 10, 0.705);
+}
+
+.questionIconLast{
+  font-size: 2rem;
+  top: 35rem;
+  left: 35rem;
+  right: 20rem;
+}
+
+ 
+.startContainer{
+  position: fixed;
+  top: 15rem;
+  left: 30rem;
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+}
+
+.startBtn{
+  position: fixed;
+  bottom: 11rem;
+  left: 44rem;
+  border: none;
+  width: 8vw;
+  padding: 15px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  animation: fadeEffect 3s infinite alternate;
+}
+
+@keyframes fadeEffect {
+  0% {
+    opacity: 1; /* Fully opaque */
+  }
+  50% {
+    opacity: 0.4; /* Fully transparent */
+  }
+ 100%{
+  opacity: 0.6;
+  font-size: 1.5rem;
+ }
+}
+
+/* question style */
+.questionContainer{
+  position: relative;
+  top: 20vh;
+  left: 20vh;
+  display: grid;
+}
+
+.questionUl{
+list-style: none;
+font-size: 1.5rem;
+
+}
+
+.optionUl{
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 30rem);
+
+}
+
+.ww{
+  border: 1px solid white;
+  padding: 1rem;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  border-radius: 10rem;
+}
+
+.btnSubmit{
+  border: none;
+  padding: 1rem;
+  width: 10rem;
+  border-radius: 10rem;
+}
+
+/* Level Choice */
+.inputContainer{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40vh;
+  position: absolute;
+  left: 40vw;
+  z-index: 1000;
+}
+
+.inputContainer input{
+  width: 20vw;
+  padding: 10px;
+  margin-bottom: 4px;
+}
+
+.inputContainer button{
+  width: 8vw;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

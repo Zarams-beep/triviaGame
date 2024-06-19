@@ -1,7 +1,7 @@
 import React ,{useState, useEffect} from 'react';
 import { decodeEntities, shuffleArray } from '../Helpers/callBackFunction';
-
-
+import StyleKeep from '../Helpers/StyleKeep';
+import { Link } from 'react-router-dom';
 const HardStart=()=>{
 
     // useStates 
@@ -79,7 +79,7 @@ else{
     return(
         <>
         <main className="questionContainer">
-
+        <StyleKeep/>
             <h2>Questions & Answers</h2>
             <ul className='questionUl'>
              
@@ -87,7 +87,7 @@ else{
 
             <ul className='optionUl'>
                 {option[index] && option[index].map((answer, idx) => (
-                    <li key={idx} className='ww'>
+                    <li key={idx} className='optionli'>
                         <label htmlFor={`option_${idx}`}>
                             <input type="radio" name={`question_${index}`} value={decodeEntities(answer)} id={`option_${idx}`} onChange={()=>setSelectedAnswer(decodeEntities(answer))}/>
                             {decodeEntities(answer)}
@@ -98,7 +98,11 @@ else{
 
             </li>
             </ul>
-            <button className='btnSubmit' onClick={()=>handleCorrect(questionData,selectedAnswer)}>Next</button></main>
+            <div className="buttonsEnd">
+                <button className='btnSubmit' onClick={()=>handleCorrect(questionData,selectedAnswer)}>Next</button>
+                <Link to='/endgame'>
+                    <button className="btnEnd">End</button>
+                </Link></div></main>
  
         </>
     )

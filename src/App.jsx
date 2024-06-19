@@ -6,6 +6,7 @@ import MediumStart from './views/questionStartMedium';
 import HardStart from './views/questionStartHard';
 import StartContinueStore from './views/StartContinue';
 import ScoreBoard from './views/scoreBoard';
+import EndContainer from './views/endContainer';
 
 const App = () => {
   return (
@@ -19,7 +20,7 @@ const App = () => {
           <Route path="/hardfetch" element={ <HardStart/>} />
           <Route path="/startContinue" element={<StartContinueStore/>} />
           <Route path="/scoreboard" element={<ScoreBoard/>} />
-
+          <Route path='/endgame' element={<EndContainer/>}/>
         </Routes>
       </div>
     </Router>

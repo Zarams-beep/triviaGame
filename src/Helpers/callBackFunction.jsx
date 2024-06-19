@@ -16,4 +16,16 @@ export function decodeEntities(html) {
     
     return newArray;
   }
+
+  // GlobalLevelContext.js
+
+import { createContext } from 'react';
+
+const GlobalLevelContext = createContext({
+    levelStore: '', // Initial value for levelStore
+    setLevelStore: () => {}, // Placeholder function
+});
+
+export default GlobalLevelContext;
+
   

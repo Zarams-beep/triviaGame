@@ -22,7 +22,10 @@
   font-weight: bold;
 }
 
-
+.styleAll{
+  position: relative;
+  z-index: -20;
+}
 .questionIconGreen,.questionIconRed{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -174,7 +177,7 @@ font-size: 1.5rem;
 
 }
 
-.ww{
+.optionli{
   border: 1px solid white;
   padding: 1rem;
   margin-top: 2rem;
@@ -182,13 +185,26 @@ font-size: 1.5rem;
   border-radius: 10rem;
 }
 
-.btnSubmit{
+.buttonsEnd{
+margin-left: 5rem;
+}
+.btnSubmit, .btnEnd{
   border: none;
   padding: 1rem;
   width: 10rem;
   border-radius: 10rem;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
 }
 
+.btnEnd{
+  background-color: red;
+  margin-left: 10px;
+  cursor: pointer;
+}
 /* Level Choice */
 .inputContainer{
   display:flex;
@@ -212,4 +228,50 @@ font-size: 1.5rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+
+.endGame{
+  position: relative;
+  top: 20vh;
+  left: 30vw;
+}
+
+.endGame2{
+  position: fixed;
+  top: 40vh;
+  left: 40vw;
+  background-color: rgba(126, 124, 124, 0.596);
+  width: 25rem;
+  height: 25vh;
+  padding-left: 20px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px black;
+}
+
+.endGame2 .button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.endGame2 p{
+  padding-left: 30px;
+  padding-bottom: 20px;
+}
+.endGame2 button{
+  width: 6rem;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  font-size: 1rem;
+}
+
+.endGame2 .no{
+  margin-left: 10px;
+  background-color: red;
 }

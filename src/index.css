@@ -4,11 +4,14 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  box-sizing: border-box;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
+  width: 1200px; 
+  overflow-x: auto; 
+  overflow-y: auto; 
+  white-space: nowrap;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -122,17 +125,17 @@
 
  
 .startContainer{
-  position: fixed;
-  top: 15rem;
-  left: 30rem;
+  position: relative;
+  top: 5rem;
+  left: 25rem;
   font-size: 4rem;
   letter-spacing: 0.2rem;
 }
 
 .startBtn{
   position: fixed;
-  bottom: 11rem;
-  left: 44rem;
+  bottom: 9rem;
+  left: 40rem;
   border: none;
   width: 8vw;
   padding: 15px;
@@ -198,6 +201,7 @@ margin-left: 5rem;
   font-weight: bold;
   font-size: 1.2rem;
   letter-spacing: 0.5px;
+  cursor: pointer;
 }
 
 .btnEnd{
@@ -233,45 +237,67 @@ margin-left: 5rem;
 
 .endGame{
   position: relative;
-  top: 20vh;
+  top: 10vh;
   left: 30vw;
 }
 
 .endGame2{
-  position: fixed;
-  top: 40vh;
+  /* position: fixed;S */
   left: 40vw;
   background-color: rgba(126, 124, 124, 0.596);
-  width: 25rem;
-  height: 25vh;
-  padding-left: 20px;
-  font-size: 1.5rem;
+  width: 35rem;
+  height: 65vh;
+  padding: 30px;
+  color: black;
   border-radius: 5px;
   box-shadow: 1px 1px 1px black;
 }
 
-.endGame2 .button{
+
+.endGame2 p{
+  text-align: center;
+}
+.endGame2 button{
+  width: 15rem;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.endGame .btnContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.modelStyle{
+  background-color: rgba(65, 62, 62, 0.74);
+  margin-top: 30vh;
+  margin-left: 35vw;
+  width: 30vw;
+  height: 30vh;
+  padding-top: 20px;
+  padding-left: 20px;
+  border: none;
+  border-radius: 3px;
+}
+
+.modelStyle .btnContainer{
+  margin-top: 3vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
-.endGame2 p{
-  padding-left: 30px;
-  padding-bottom: 20px;
-}
-.endGame2 button{
-  width: 6rem;
+.modelStyle .btnContainer button{
   padding: 10px;
+  margin-right: 10px;
+  width: 10vw;
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: green;
   color: white;
-  font-size: 1rem;
-}
-
-.endGame2 .no{
-  margin-left: 10px;
-  background-color: red;
+  font-size: 1.2rem;
+  cursor: pointer;
 }

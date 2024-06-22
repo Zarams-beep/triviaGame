@@ -4,9 +4,9 @@ const Start=()=>{
 
     return(
         <>
+         <StyleKeep/>
             <div className="gameStartContainer">
-               
-               <StyleKeep/>
+              
                     <p className="startContainer">HOW MUCH DO YOU
                         <br /> <span style={{paddingLeft:'5rem'}}>KNOW QUIZ</span></p>
 

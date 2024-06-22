@@ -1,7 +1,7 @@
-import React ,{useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import { decodeEntities, shuffleArray } from '../Helpers/callBackFunction';
 import StyleKeep from '../Helpers/StyleKeep';
-import { Link } from 'react-router-dom';
+import Modal from 'react-modal';
 const HardStart=()=>{
 
     // useStates 
@@ -11,6 +11,7 @@ const HardStart=()=>{
    const [scoreObject, setScoreObject] = useState({wins:0,lose:0});
    const [selectedAnswer, setSelectedAnswer] = useState('')
    const [index, setIndex] = useState(0)
+   const [isModalOpen,setIsModalOpen] = useState(false)
 
 //    useEffect to call fetch data function
    useEffect(()=>{
@@ -36,24 +37,21 @@ const HardStart=()=>{
    };
 
    const handleCorrect = (questionData,event) => {
+    let updatedScoreObject;
     if (questionData.correct_answer === event) {
-        setScoreObject(prevScore => ({
-            ...prevScore,
-            wins: prevScore.wins + 1
-        }));
+        updatedScoreObject = { ...scoreObject, wins: scoreObject.wins + 1 };
  
      
     } else {
-        setScoreObject(prevScore => ({
-            ...prevScore,
-            lose: prevScore.lose + 1
-        }));
+        updatedScoreObject = { ...scoreObject, lose: scoreObject.lose + 1 };
    
     }
-    setIndex(prevIndex => prevIndex + 1);
-         localStorage.setItem('scoreObject',JSON.stringify(scoreObject));
- 
-        setSelectedAnswer('');
+    setScoreObject(updatedScoreObject);
+     // Save to localStorage
+     localStorage.setItem('scoreObject', JSON.stringify(updatedScoreObject));
+
+     setIndex(prevIndex => prevIndex + 1);
+     setSelectedAnswer('');
         
 }
 
@@ -80,7 +78,7 @@ else{
         <>
         <main className="questionContainer">
         <StyleKeep/>
-            <h2>Questions & Answers</h2>
+            <h2>Questions & Answers ({index}/50)</h2>
             <ul className='questionUl'>
              
             <li key={index} className='questionLi'>{questionData && decodeEntities(questionData.question)}
@@ -89,7 +87,7 @@ else{
                 {option[index] && option[index].map((answer, idx) => (
                     <li key={idx} className='optionli'>
                         <label htmlFor={`option_${idx}`}>
-                            <input type="radio" name={`question_${index}`} value={decodeEntities(answer)} id={`option_${idx}`} onChange={()=>setSelectedAnswer(decodeEntities(answer))}/>
+                            <input type="radio" name={`question_${index}`} value={decodeEntities(answer)} id={`option_${idx}`} onChange={()=>setSelectedAnswer(decodeEntities(answer))} style={{cursor:'pointer'}}/>
                             {decodeEntities(answer)}
                         </label>
                     </li>
@@ -100,9 +98,26 @@ else{
             </ul>
             <div className="buttonsEnd">
                 <button className='btnSubmit' onClick={()=>handleCorrect(questionData,selectedAnswer)}>Next</button>
-                <Link to='/endgame'>
-                    <button className="btnEnd">End</button>
-                </Link></div></main>
+
+                <button className="btnEnd" onClick={() => setIsModalOpen(true)}>End</button>
+                
+                <Modal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)} className="modelStyle" contentLabel='Confirmation Model'>
+                    {
+                        <>
+                            <h2>Are you sure you want to submit?</h2>
+                            <div className='btnContainer'>
+                            <button style={{backgroundColor:'red'}} onClick={() => setIsModalOpen(false)}>
+                                Cancel
+                            </button>
+                            <button onClick={()=>{window.location.href='/quiz-completion'}} >
+                                Submit
+                            </button>
+                            </div>
+                        </>
+                    }
+                </Modal>
+
+                    </div></main>
  
         </>
     )

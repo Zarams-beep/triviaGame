@@ -20,30 +20,35 @@
 }
 
 .gameStartContainer{
+  display: flex;
+  justify-content: center;
   position: relative;
   font-family: "Kanit", sans-serif;
   font-weight: bold;
-  top: 8rem;
-  left: 15rem;
-  right: 15rem;
+  top: 2rem;
 }
 
-.divFlex,.divFlex2{
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.divFlex2{
-  top: 25rem;
-  left: 30rem;
-}
 .startContainer{
   font-size: 4rem;
   letter-spacing: 0.2rem;
   text-align: center;
 }
-
+@media all and (max-width:770px) {
+  .startContainer{
+    font-size: 3rem;
+  }
+  .gameStartContainer{
+    top: 10rem;
+  }
+}
+@media all and (max-width:450px) {
+  .startContainer{
+    font-size: 2.5rem;
+  }
+}
+.divFlex2{
+  text-align: center;
+}
 .startBtn{
   border: none;
   border-radius: 10px;
@@ -133,7 +138,17 @@
   transform: skewX(8deg);
   animation: redBig2 5s infinite alternate-reverse; 
 }
-
+/* @media all and (max-width:1157px) {
+  .divFlex{
+    left: 14rem;
+  }
+  .divFlex2{
+    left: 28rem;
+  }
+  .styleAll{
+    left: 5rem;
+  }
+}
 @media all and (max-width:900px) {
   .styleAll{
     gap: 1rem;
@@ -144,7 +159,16 @@
   gap: 10rem;
   }
 }
-@media all and (max-width:770px) {
+@media all and (max-width: 872px) {
+  .divFlex{
+    left: 10rem;
+  }
+  .divFlex2{
+    left: 0;
+    right: 0rem;
+  }
+}
+@media all and (max-width:775px) {
   .startContainer{
     font-size: 3.5rem;
   }
@@ -158,8 +182,20 @@
   }
  
   .divFlex2{
-    top: 28rem;
-    left: 20rem;
+    top: 26rem;
+    left: 5rem;
+  }
+}
+@media all and (max-width:710px) {
+  .startContainer{
+    font-size: 3rem;
+  }
+  .divFlex{
+    top: 6rem;
+  }
+  .divFlex2{
+    top: 20rem;
+    left: 0rem;
   }
 }
 @media all and (max-width:414px) {
@@ -194,7 +230,7 @@
     top: 23rem;
     left: 6rem;
   }
-}
+} */
 @keyframes redBig2 {
   0% {
     font-size: 6rem; 
@@ -263,24 +299,30 @@ margin-left: 5rem;
   display:flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40vh;
-  position: absolute;
-  left: 40vw;
+  position: relative;
+  top: 20rem;
   z-index: 1000;
 }
 
 .inputContainer input{
-  width: 20vw;
-  padding: 10px;
+  width: 20rem;
+  font-size: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: .5rem;
   margin-bottom: 4px;
 }
 
 .inputContainer button{
-  width: 8vw;
+  width: 8rem;
+  margin-top: .6rem;
   padding: 8px;
+  font-size: 1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  background-color: black;
+  color: white;
 }
 
 

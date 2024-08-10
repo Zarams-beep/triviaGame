@@ -54,52 +54,7 @@
   padding-top: .5rem;
   padding-bottom: .5rem;
 }
-@media all and (max-width:900px) {
-  .styleAll{
-    gap: 1rem;
-    left: 2rem;
-  }
-}
-@media all and (max-width:770px) {
-  .startContainer{
-    font-size: 3.5rem;
-  }
-  .divFlex{
-    top: 10rem;
-    left: 8rem;
-  }
-  .styleAll{
-    top: 20rem;
-  }
- 
-  .divFlex2{
-    top: 28rem;
-    left: 20rem;
-  }
-}
-@media all and (max-width:414px) {
-  .startContainer{
-    font-size: 2rem;
-    text-align: center;
-  }
-  .divFlex{
-    left: 3rem;
-  }
-  .divFlex2{
-    top: 20rem;
-    left: 8rem;
-  }
-}
-@media all and (max-width:390px) {
-  .divFlex{
-    left: 1rem;
-    top: 14rem;
-  }
-  .divFlex2{
-    top: 23rem;
-    left: 6rem;
-  }
-}
+
 @keyframes fadeEffect {
   0% {
     opacity: 1; /* Fully opaque */
@@ -122,6 +77,7 @@
   gap: 5rem;
   overflow-x: hidden;
 }
+
 .questionIconGreen,.questionIconRed{
   display: flex;
   align-items: center;
@@ -178,7 +134,67 @@
   animation: redBig2 5s infinite alternate-reverse; 
 }
 
-
+@media all and (max-width:900px) {
+  .styleAll{
+    gap: 1rem;
+    left: 2rem;
+    
+  }
+ .questionIconRed{
+  gap: 10rem;
+  }
+}
+@media all and (max-width:770px) {
+  .startContainer{
+    font-size: 3.5rem;
+  }
+  .divFlex{
+    top: 10rem;
+    left: 8rem;
+  }
+  .styleAll{
+    top: 20rem;
+    right: 0;
+  }
+ 
+  .divFlex2{
+    top: 28rem;
+    left: 20rem;
+  }
+}
+@media all and (max-width:414px) {
+  .startContainer{
+    font-size: 2rem;
+    text-align: center;
+  }
+  .divFlex{
+    left: 3rem;
+  }
+  .divFlex2{
+    top: 20rem;
+    left: 8rem;
+  }
+  .styleAll{
+    gap: 0;
+    left: 1rem;
+  }
+  .questionIconGreen,.questionIconRed{
+    font-size: 2rem;
+  }
+  .questionIconRed2{
+    font-size: 1rem;
+  }
+}
+@media all and (max-width:390px) {
+  .divFlex{
+    left: 1rem;
+    top: 14rem;
+  }
+  .divFlex2{
+    top: 23rem;
+    left: 6rem;
+  }
+}
 @keyframes redBig2 {
   0% {
     font-size: 6rem; 

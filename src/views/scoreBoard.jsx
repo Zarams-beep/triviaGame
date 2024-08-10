@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ScoreBoard = () => {
    // Retrieve scoreObject from localStorage
    const storedScoreObject = JSON.parse(localStorage.getItem('scoreObject')) || { wins: 0, lose: 0 };

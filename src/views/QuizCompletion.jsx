@@ -1,7 +1,5 @@
 // EndContainer.js
 import StyleKeep from '../Helpers/StyleKeep';
-import { CircularProgressbar, buildStyles} from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
 import { useNavigate } from 'react-router-dom';
 const QuizCompletion = () => {
     const scoreObject = JSON.parse(localStorage.getItem('scoreObject'));
@@ -11,21 +9,12 @@ const QuizCompletion = () => {
 
     return (
         <>
+         <StyleKeep/>
             <main className="endGame">
             <div className="endGame2">
-            <div style={{ width: '180px', height: '180px', marginBottom: '1rem', marginLeft: '12rem' }}>
-            <CircularProgressbar
-              value={pecentAge}
-              text={`${pecentAge}%`}
-              styles={buildStyles({
-                textColor: '#000',
-                pathColor: 'green',
-                trailColor: 'red',
-                strokeWidth: '12',
-              })}
-            />
-          </div>
-                <StyleKeep/>
+              <button className='percentBtn'>
+                {pecentAge}%
+              </button>
             
             <div className="congratContainer">
                 
@@ -34,7 +23,7 @@ const QuizCompletion = () => {
             <p>You attempted {totalScore} questions and from that {scoreObject.wins} questions are correct.</p>
 
             <div className='btnContainer'>
-            <button onClick={() => navigate('/')}>Back to Home</button>
+            <button className='goBack' onClick={() => navigate('/')}>Back to Home</button>
            
           </div> </div>   
                 </div>

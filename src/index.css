@@ -374,27 +374,28 @@ gap: 1rem;
 
 .endGame{
   position: relative;
-  top: 10vh;
-  left: 30vw;
+  display: flex;
+  justify-content: center;
+  top: 5rem;
 }
-
 .endGame2{
-  /* position: fixed;S */
-  left: 40vw;
-  background-color: rgba(126, 124, 124, 0.596);
-  width: 35rem;
-  height: 65vh;
-  padding: 30px;
-  color: black;
-  border-radius: 5px;
-  box-shadow: 1px 1px 1px black;
+  text-align: center;
+}
+.percentBtn{
+  width: 14rem;
+  height: 14rem;
+  border-radius: 20rem;
+  font-size: 3rem;
+  border: 1px solid gray;
+  box-shadow: 0 0 2px 0.5px rgba(0, 0, 0, 0.3);
 }
 
 
 .endGame2 p{
   text-align: center;
+  text-wrap: wrap;
 }
-.endGame2 button{
+.endGame2 .goBack{
   width: 15rem;
   padding: 15px;
   border: none;

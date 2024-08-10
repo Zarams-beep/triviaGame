@@ -6,36 +6,76 @@
   font-weight: 400;
   box-sizing: border-box;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-  width: 1200px; 
-  overflow-x: auto; 
-  overflow-y: auto; 
+  color: darkslategray;
+  background-color:whitesmoke; 
   white-space: nowrap;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  /* height: 100vh; */
 }
 
 .gameStartContainer{
   position: relative;
-  margin: 8rem;
   font-family: "Kanit", sans-serif;
   font-weight: bold;
+  top: 8rem;
+  left: 15rem;
+  right: 15rem;
 }
 
+.divFlex,.divFlex2{
+  position: fixed;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.divFlex2{
+  top: 25rem;
+}
+.startContainer{
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+.startBtn{
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  animation: fadeEffect 3s infinite alternate;
+  background-color: black;
+  width: 10rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+@keyframes fadeEffect {
+  0% {
+    opacity: 1; /* Fully opaque */
+  }
+  50% {
+    opacity: 0.4; /* Fully transparent */
+  }
+ 100%{
+  opacity: 0.6;
+ }
+}
 .styleAll{
-  position: relative;
+  position: absolute;
+  top: 8rem;
+  left: 10rem;
+  right: 10rem;
   z-index: -20;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  gap: 5rem;
 }
 .questionIconGreen,.questionIconRed{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: space-between;
-  position: fixed;
-  left: 20rem;
-  right: 80rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 20rem;
   color: rgba(10, 136, 10, 0.705);
   font-size: 5rem;
@@ -57,14 +97,11 @@
   }
 }
 
-.questionIconRed,.questionIconLast{
-  grid-template-columns: repeat(2,1fr);
-  top: 12rem;
-  left: 35rem;
+.questionIconRed{
   color: rgba(202, 13, 13, 0.699);
-  gap: 8rem;
   font-size: 2rem;
   animation: redBig 5s infinite alternate-reverse; 
+  margin-top: 0rem;
 }
 
 
@@ -80,20 +117,14 @@
   }
 }
 
-.questionIconRed2,.questionIconGreen2, .questionIconLast{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  justify-content: space-between;
-  position: fixed;
-  top: 16rem;
-  left: 15rem;
-  right: -30rem;
+.questionIconRed2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20%;
   color: rgba(202, 13, 13, 0.699);
   font-size: 6rem;
-  transform: skewX(8deg)
-}
-
-.questionIconRed2, .questionIconGreen2{
+  transform: skewX(8deg);
   animation: redBig2 5s infinite alternate-reverse; 
 }
 
@@ -109,54 +140,118 @@
     font-size: 5rem;
   }
 }
-
-.questionIconGreen2{
-  top: 30rem;
-  left: 8rem;
-  color: rgba(10, 136, 10, 0.705);
-}
-
-.questionIconLast{
-  font-size: 2rem;
-  top: 35rem;
-  left: 35rem;
-  right: 20rem;
-}
-
- 
-.startContainer{
-  position: relative;
-  top: 5rem;
-  left: 25rem;
-  font-size: 4rem;
-  letter-spacing: 0.2rem;
-}
-
-.startBtn{
-  position: fixed;
-  bottom: 9rem;
-  left: 40rem;
-  border: none;
-  width: 8vw;
-  padding: 15px;
-  background-color: transparent;
-  border: 1px solid white;
-  border-radius: 10px;
-  font-size: 1.2rem;
-  animation: fadeEffect 3s infinite alternate;
-}
-
-@keyframes fadeEffect {
-  0% {
-    opacity: 1; /* Fully opaque */
+@media all and (max-width:900px) {
+  .styleAll{
+    gap: 1rem;
+    left: 2rem;
   }
-  50% {
-    opacity: 0.4; /* Fully transparent */
+}
+@media all and (max-width:770px) {
+  .startContainer{
+    font-size: 3rem;
   }
- 100%{
-  opacity: 0.6;
-  font-size: 1.5rem;
- }
+  .divFlex{
+    top: 11rem;
+  }
+  .styleAll{
+    top: 10rem;
+  }
+  .gameStartContainer{
+    top: 10rem;
+    left: 12rem;
+    right: 10rem;
+  }
+  .divFlex2{
+    top: 30rem;
+  }
+  .startBtn{
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+}
+
+@media all and (max-width:630px) {
+  .styleAll{
+    top: 12rem;
+  }
+  
+  .gameStartContainer{
+    left: 12rem;
+    top: 13rem;
+  }
+}
+@media all and (max-width:580px) {
+  .divFlex2{
+    bottom: 10rem;
+  }
+  .startBtn{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+@media all and (max-width:530px) {
+  .divFlex{
+    top: 10rem;
+  }
+  .divFlex2{
+    top: 22rem;
+  }
+}
+@media all and (max-width:500px) {
+  .styleAll{
+    top: 15rem;
+  }
+  .divFlex{
+    top: 16rem;
+  }
+  .divFlex2{
+    top: 28rem;
+  }
+}
+@media all and (max-width:450px) {
+  .divFlex{
+    top: 20rem;
+  }
+  .divFlex2{
+    top: 30rem;
+  }
+}
+@media all and (max-width:400px) {
+  .styleAll{
+    top: 20rem;
+  }
+  .divFlex{
+    top: 20rem;
+  }
+  .divFlex2{
+    top: 20rem;
+  }
+}
+@media all and (max-width:370px) {
+  .styleAll{
+    top: 20rem;
+  }
+  .divFlex{
+    top: 20rem;
+  }
+  .divFlex2{
+    top: 15rem;
+  }
+}
+@media all and (max-width:320px) {
+  .divFlex{
+    top: 27rem;
+  }
+  .divFlex2{
+   top: 20rem;
+  }
+}
+@media all and (max-width:300px) {
+  .styleAll{
+    top: 30rem;
+  }
 }
 
 /* question style */

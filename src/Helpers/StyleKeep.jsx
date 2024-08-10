@@ -11,7 +11,7 @@ const StyleKeep=()=>{
 
                 <div className="questionIconRed">
                     <FaQuestion />
-                    <FaQuestion style={{marginLeft:'15rem', paddingTop:'1rem'}}/>
+                    <FaQuestion/>
                 </div>
                 
                 <div className="questionIconRed2">
@@ -19,15 +19,7 @@ const StyleKeep=()=>{
                     <FaQuestion />
                 </div>
 
-                <div className="questionIconGreen2">
-                    <FaQuestion />
-                    <FaQuestion />
-                </div>
-
-                <div className="questionIconLast">
-                <FaQuestion style={{color: 'rgba(10, 136, 10, 0.705)'}} />
-                    <FaQuestion />
-                </div></div>
+              </div>
         </>
     )
    

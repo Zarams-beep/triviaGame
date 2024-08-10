@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 import { decodeEntities, shuffleArray } from '../Helpers/callBackFunction';
 import StyleKeep from '../Helpers/StyleKeep';
 import Modal from 'react-modal';
-
+import { Link } from 'react-router-dom';
 const EasyStart=()=>{
 
     // useStates 
@@ -114,9 +114,10 @@ else{
                             <button style={{backgroundColor:'red'}} onClick={() => setIsModalOpen(false)}>
                                 Cancel
                             </button>
-                            <button onClick={()=>{window.location.href='/quiz-completion'}} >
+                            <Link to ='/endpage' style={{textDecoration:'none',color:'black'}}>
+                            <button>
                                 Submit
-                            </button>
+                            </button></Link>
                             </div></div>
                         </>
                     }

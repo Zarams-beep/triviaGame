@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import { decodeEntities, shuffleArray } from '../Helpers/callBackFunction';
 import StyleKeep from '../Helpers/StyleKeep';
 import Modal from 'react-modal';
+import { Link } from 'react-router-dom';
 const HardStart=()=>{
 
     // useStates 
@@ -104,15 +105,17 @@ else{
                 <Modal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)} className="modelStyle" contentLabel='Confirmation Model'>
                     {
                         <>
+                        <div className="modelContainer">
                             <h2>Are you sure you want to submit?</h2>
                             <div className='btnContainer'>
                             <button style={{backgroundColor:'red'}} onClick={() => setIsModalOpen(false)}>
                                 Cancel
                             </button>
-                            <button onClick={()=>{window.location.href='/quiz-completion'}} >
+                            <Link to ='/endpage' style={{textDecoration:'none',color:'black'}}>
+                            <button>
                                 Submit
-                            </button>
-                            </div>
+                            </button></Link>
+                            </div></div>
                         </>
                     }
                 </Modal>

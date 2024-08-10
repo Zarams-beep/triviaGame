@@ -15,6 +15,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ 
   overflow-x: hidden;
   
 }
@@ -268,7 +269,7 @@
 
 .questionUl{
 list-style: none;
-font-size: 1.2rem;
+font-size: 1.5rem;
 }
 .optionUl{
   width: 80%;
@@ -310,7 +311,7 @@ gap: 1rem;
 }
 @media all and (max-width:700px) {
   .questionLi{
-    font-size: 1rem;
+    text-wrap: wrap;
   }
 }
 @media all and (max-width:600px) {
@@ -319,12 +320,12 @@ gap: 1rem;
     padding-left: 0;
   }
   .questionContainer{
-    left: 0;
+    left: 1rem;
   }
 }
 @media all and (max-width:460px) {
   .questionLi{
-    font-size: .8rem;
+    font-size: 1.1rem;
   }
   .optionli{
     width: 15rem;

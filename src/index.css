@@ -284,6 +284,30 @@ font-size: 1.2rem;
   margin-right: 2rem;
   border-radius: 10rem;
 }
+
+.buttonsEnd{
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 1rem;
+}
+.btnSubmit, .btnEnd{
+  border: none;
+  padding: 1rem;
+  width: 10rem;
+  border-radius: 10rem;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.btnEnd{
+  background-color: red;
+  cursor: pointer;
+}
 @media all and (max-width:700px) {
   .questionLi{
     font-size: 1rem;
@@ -302,27 +326,17 @@ font-size: 1.2rem;
   .questionLi{
     font-size: .8rem;
   }
-}
-.buttonsEnd{
-margin-left: 5rem;
-}
-.btnSubmit, .btnEnd{
-  border: none;
-  padding: 1rem;
-  width: 10rem;
-  border-radius: 10rem;
-  background-color: green;
-  color: white;
-  font-weight: bold;
-  font-size: 1.2rem;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-}
-
-.btnEnd{
-  background-color: red;
-  margin-left: 10px;
-  cursor: pointer;
+  .optionli{
+    width: 15rem;
+  }
+  .buttonsEnd{
+    justify-content: left;
+    margin-left: 2rem;
+  }
+  .btnSubmit,.btnEnd{
+    margin-left: 0;
+    width: 8rem;
+  }
 }
 /* Level Choice */
 .inputContainer{

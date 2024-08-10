@@ -20,7 +20,6 @@
 }
 
 .gameStartContainer{
-  overflow-x: hidden;
   position: relative;
   font-family: "Kanit", sans-serif;
   font-weight: bold;

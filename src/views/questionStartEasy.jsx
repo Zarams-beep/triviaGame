@@ -101,10 +101,14 @@ else{
                 <button className='btnSubmit' onClick={()=>handleCorrect(questionData,selectedAnswer)}>Next</button>
 
                 <button className="btnEnd" onClick={() => setIsModalOpen(true)}>End</button>
-                
-                <Modal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)} className="modelStyle" contentLabel='Confirmation Model'>
+
+            </div>
+                    
+                 
+            <Modal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)} className="modelStyle" contentLabel='Confirmation Model'>
                     {
                         <>
+                        <div className="modelContainer">
                             <h2>Are you sure you want to submit?</h2>
                             <div className='btnContainer'>
                             <button style={{backgroundColor:'red'}} onClick={() => setIsModalOpen(false)}>
@@ -113,12 +117,11 @@ else{
                             <button onClick={()=>{window.location.href='/quiz-completion'}} >
                                 Submit
                             </button>
-                            </div>
+                            </div></div>
                         </>
                     }
                 </Modal>
-
-                    </div></main>
+            </main>
  
         </>
     )

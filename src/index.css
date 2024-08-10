@@ -409,11 +409,10 @@ gap: 1rem;
 }
 
 .modelStyle{
-  background-color: rgba(65, 62, 62, 0.74);
-  margin-top: 30vh;
-  margin-left: 35vw;
-  width: 30vw;
-  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
   padding-top: 20px;
   padding-left: 20px;
   border: none;
@@ -421,7 +420,7 @@ gap: 1rem;
 }
 
 .modelStyle .btnContainer{
-  margin-top: 3vw;
+  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -430,11 +429,19 @@ gap: 1rem;
 .modelStyle .btnContainer button{
   padding: 10px;
   margin-right: 10px;
-  width: 10vw;
+  width: 6rem;
   border: none;
   border-radius: 3px;
   background-color: green;
-  color: white;
+  font-weight: bold;
   font-size: 1.2rem;
   cursor: pointer;
+}
+@media all and (max-width:400px) {
+  .modelStyle h2{
+    font-size: 1.2rem;
+  }
+  .modelStyle .btnContainer button{
+    font-size: 1rem;
+  }
 }

@@ -6,8 +6,7 @@ import MediumStart from './views/questionStartMedium';
 import HardStart from './views/questionStartHard';
 import StartContinueStore from './views/StartContinue';
 import ScoreBoard from './views/scoreBoard';
-import QuizCompletion from './views/QuizCompletion';
-
+import EndPage from './views/EndPage'
 const App = () => {
   return (
     <Router>
@@ -20,7 +19,7 @@ const App = () => {
           <Route path="/hardfetch" element={ <HardStart/>} />
           <Route path="/startContinue" element={<StartContinueStore/>} />
           <Route path="/scoreboard" element={<ScoreBoard/>} />
-          <Route path='/quiz-completion' element={<QuizCompletion/>}/>
+          <Route path='/endpage' element={<EndPage/>}/>
         </Routes>
       </div>
     </Router>

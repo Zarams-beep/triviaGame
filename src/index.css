@@ -41,6 +41,51 @@
   letter-spacing: 0.2rem;
   text-align: center;
 }
+@media all and (max-width:900px) {
+  .styleAll{
+    gap: 1rem;
+    left: 2rem;
+  }
+}
+@media all and (max-width:770px) {
+  .startContainer{
+    font-size: 3rem;
+  }
+  .divFlex{
+    top: 11rem;
+  }
+  .styleAll{
+    top: 10rem;
+  }
+  .gameStartContainer{
+    top: 10rem;
+    left: 12rem;
+    right: 10rem;
+  }
+  .divFlex2{
+    top: 30rem;
+  }
+  .startBtn{
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+}
+@media all and (max-width:414px) {
+  .startContainer{
+    font-size: 2rem;
+    text-align: center; 
+  }
+  .divFlex{
+    width: 10%;
+    left: 11rem;
+  }
+  .divFlex2{
+    top: 20rem;
+    left: 5rem;
+  }
+}
 .startBtn{
   border: none;
   border-radius: 10px;
@@ -140,119 +185,7 @@
     font-size: 5rem;
   }
 }
-@media all and (max-width:900px) {
-  .styleAll{
-    gap: 1rem;
-    left: 2rem;
-  }
-}
-@media all and (max-width:770px) {
-  .startContainer{
-    font-size: 3rem;
-  }
-  .divFlex{
-    top: 11rem;
-  }
-  .styleAll{
-    top: 10rem;
-  }
-  .gameStartContainer{
-    top: 10rem;
-    left: 12rem;
-    right: 10rem;
-  }
-  .divFlex2{
-    top: 30rem;
-  }
-  .startBtn{
-    font-size: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
 
-}
-
-@media all and (max-width:630px) {
-  .styleAll{
-    top: 12rem;
-  }
-  
-  .gameStartContainer{
-    left: 12rem;
-    top: 13rem;
-  }
-}
-@media all and (max-width:580px) {
-  .divFlex2{
-    bottom: 10rem;
-  }
-  .startBtn{
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-}
-@media all and (max-width:530px) {
-  .divFlex{
-    top: 10rem;
-  }
-  .divFlex2{
-    top: 22rem;
-  }
-}
-@media all and (max-width:500px) {
-  .styleAll{
-    top: 15rem;
-  }
-  .divFlex{
-    top: 16rem;
-  }
-  .divFlex2{
-    top: 28rem;
-  }
-}
-@media all and (max-width:450px) {
-  .divFlex{
-    top: 20rem;
-  }
-  .divFlex2{
-    top: 30rem;
-  }
-}
-@media all and (max-width:400px) {
-  .styleAll{
-    top: 20rem;
-  }
-  .divFlex{
-    top: 20rem;
-  }
-  .divFlex2{
-    top: 20rem;
-  }
-}
-@media all and (max-width:370px) {
-  .styleAll{
-    top: 20rem;
-  }
-  .divFlex{
-    top: 20rem;
-  }
-  .divFlex2{
-    top: 15rem;
-  }
-}
-@media all and (max-width:320px) {
-  .divFlex{
-    top: 27rem;
-  }
-  .divFlex2{
-   top: 20rem;
-  }
-}
-@media all and (max-width:300px) {
-  .styleAll{
-    top: 30rem;
-  }
-}
 
 /* question style */
 .questionContainer{

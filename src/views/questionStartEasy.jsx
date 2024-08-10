@@ -77,8 +77,8 @@ else{
     const questionData = data.results[index];
     return(
         <>
+        <StyleKeep/>
         <main className="questionContainer">
-            <StyleKeep/>
             <h2>Questions & Answers ({index}/50)</h2>
             <ul className='questionUl'>
              

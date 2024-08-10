@@ -33,19 +33,7 @@
   letter-spacing: 0.2rem;
   text-align: center;
 }
-@media all and (max-width:770px) {
-  .startContainer{
-    font-size: 3rem;
-  }
-  .gameStartContainer{
-    top: 10rem;
-  }
-}
-@media all and (max-width:450px) {
-  .startContainer{
-    font-size: 2.5rem;
-  }
-}
+
 .divFlex2{
   text-align: center;
 }
@@ -137,6 +125,33 @@
   font-size: 6rem;
   transform: skewX(8deg);
   animation: redBig2 5s infinite alternate-reverse; 
+}
+@media all and (max-width:770px) {
+  .startContainer{
+    font-size: 3rem;
+  }
+  .gameStartContainer{
+    top: 10rem;
+  }
+  .styleAll{
+    left: 2rem;
+  }
+}
+@media all and (max-width:450px) {
+  .startContainer{
+    font-size: 2rem;
+  }
+  .styleAll{
+    gap: 0;
+    left: 0rem;
+    right: 0;
+  }
+  .questionIconGreen,.questionIconRed{
+    font-size: 2rem;
+  }
+  .questionIconRed2{
+    font-size: 1rem;
+  }
 }
 /* @media all and (max-width:1157px) {
   .divFlex{

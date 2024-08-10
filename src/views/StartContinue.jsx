@@ -18,7 +18,7 @@ const StartContinueStore = () => {
 
     return (
         <>
-              <StyleKeep/>
+        <StyleKeep/>
       <div className="inputContainer">
 
         <input type="text" placeholder="Enter Level" onChange={handleInputChange} />

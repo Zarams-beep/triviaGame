@@ -21,7 +21,7 @@ const StartContinueStore = () => {
         <StyleKeep/>
       <div className="inputContainer">
 
-        <input type="text" placeholder="Enter Level" onChange={handleInputChange} />
+        <input type="text" placeholder="Enter 'Easy', 'Medium' or 'Hard'" onChange={handleInputChange} />
           
         {isValidLevel && levelStore !== '' ? (
           <Link to={`/${levelStore}fetch`}>

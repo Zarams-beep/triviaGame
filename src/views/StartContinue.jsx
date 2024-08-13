@@ -7,7 +7,7 @@ const StartContinueStore = () => {
     const [isValidLevel, setIsValidLevel] = useState(true);
 
     const handleInputChange = (e) => {
-        const level = e.target.value.toLowerCase();
+        const level = e.target.value.toLowerCase().trim();
         setLevelStore(level);
         if (['easy', 'medium', 'hard'].includes(level)) {
             setIsValidLevel(true);

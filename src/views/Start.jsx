@@ -14,7 +14,8 @@ const Start=()=>{
                     </div>
                     <div className="divFlex2">
                     <button className="startBtn">
-                        <Link to="/startContinue" style={{textDecoration:'none', color:'white'}}>Start</Link>
+                        <Link to="/startContinue" 
+                        className="linkStyle">Start</Link>
                         
                     </button>
                     </div>  
